@@ -1,14 +1,20 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-teste',
-  standalone: true,
+  selector: 'appTeste',
   templateUrl: './teste.component.html',
   styleUrl: './teste.component.css'
 })
 export class TesteComponent {
-  nome = 'Sei lá';
-  n1 = 6;
-  n2 = 100;
-  r = this.n1 + this.n2;
+  nome: string; 
+  n1: number;
+  n2: number; 
+  r: number;
+
+  constructor() {
+    this.nome = "Teste";
+    this.n1 = 5;
+    this.n2 = 8;
+    this.r = this.n1 + this.n2;
+  }
 }
