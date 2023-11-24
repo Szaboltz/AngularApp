@@ -1,9 +1,15 @@
-<p>teste works!</p>
-
 <p>
-  {{nome}}
+  {{ nome }}
 </p>
 
 <p>
   O valor da soma entre {{n1}} e {{n2}} é: {{r}}
 </p>
+
+<ul>
+  <li *ngFor="let aula of vet"> 
+    <!-- Uma função for que vai percorrer o array do componente 
+    aula é o indixe da vez em meu vetor -->
+    {{ aula }}
+  </li>
+</ul>
