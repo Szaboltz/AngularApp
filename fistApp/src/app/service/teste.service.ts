@@ -1,18 +1,21 @@
-import { publishFacade } from '@angular/compiler';
 import { Injectable } from '@angular/core';
+import { Teste } from '../teste/model/teste';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TesteService {
 
-  nome: string = `"Olá, sou o primeiro serviço da aplicação!"`;
+  constructor(private httpClient: HttpClient) { 
 
-  constructor() { }
+    
 
-  getMessage() {
-    return this.nome
   }
 
-
+  getList(): Teste[] {
+    return [
+      {id: '1', name: 'Henrique', category: 'Humano'}
+    ]
+  }
 }

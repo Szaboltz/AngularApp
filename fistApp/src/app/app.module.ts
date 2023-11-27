@@ -7,7 +7,7 @@ import {MatTableModule} from '@angular/material/table'; // Importar o Material T
 
 import { AppComponent } from "./app.component";
 // import { TesteComponent } from "./teste/teste.component";
-import { TesteService } from "./service/teste.service";
+import { AppService } from "./service/app.service";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from "./app-routing.module";
 import { TesteModule } from "./teste/teste.module";
@@ -27,7 +27,7 @@ import { TesteModule } from "./teste/teste.module";
     MatTableModule,
     TesteModule
   ],
-  providers: [TesteService],
+  providers: [AppService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

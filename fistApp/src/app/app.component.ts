@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TesteService } from './service/teste.service';
+import { AppService } from './service/app.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ export class AppComponent {
 
   show: string;
 
-  constructor(private service: TesteService) { 
+  constructor(private service: AppService) { 
     this.show = this.service.getMessage();
    }
 }
