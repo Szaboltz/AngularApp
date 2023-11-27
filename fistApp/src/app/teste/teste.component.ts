@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Teste } from './model/teste';
 
 @Component({
   selector: 'appTeste',
@@ -10,7 +11,13 @@ export class TesteComponent {
   n1: number;
   n2: number; 
   r: number;
-  vet: string[] = []
+  vet: string[] = [];
+
+  data: Teste[] = [];
+  displayedColumnsAll = ["id", "name", "category"]
+  displayedColumnsId = ["id"]
+  displayedColumnsName = ["name"]
+  displayedColumnsCategory = ["category"]
 
   constructor() {
     this.nome = "Aqui é o TesteComponent";
