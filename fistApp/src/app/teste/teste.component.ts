@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Teste } from './model/teste';
 import { TesteService } from '../service/teste.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'appTeste',
@@ -14,7 +15,7 @@ export class TesteComponent implements OnInit {
   r: number;
   vet: string[] = [];
 
-  data: Teste[] = [];
+  data: Observable<Teste[]>; // Tipagem da variável 
   displayedColumnsAll = ["id", "name", "category"]
   displayedColumnsId = ["id"]
   displayedColumnsName = ["name"]
@@ -28,10 +29,13 @@ export class TesteComponent implements OnInit {
     this.r = this.n1 + this.n2;
     this.vet = ["Teste 1", "Teste 2", "Teste 3", "Teste 4"];
 
+    this.data = this.dataTable.getList(); 
+    // Por ser um observable necessita ser declarado aqui 
+
   }
 
-  // Isso aqui faz com que o componente faça a requisição dos dados ao seri inicializado
+  // Isso aqui faz com que o componente faça a requisição dos dados ao ser inicializado
   ngOnInit(): void { 
-    this.data = this.dataTable.getList();
+    
   }
 }
