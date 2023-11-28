@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Teste } from '../teste/model/teste';
 import { HttpClient } from '@angular/common/http';
+import { delay, first } from 'rxjs';
 // import { delay, first } from 'rxjs';
 
 @Injectable({
@@ -15,6 +16,6 @@ export class TesteService {
   }
 
   getList() {
-    return this.httpClient.get<Teste[]>(this.api); // <> Tipa a requisição http 
+    return this.httpClient.get<Teste[]>(this.api).pipe(first(), delay(2000)); // <> Tipa a requisição http 
   }
 }

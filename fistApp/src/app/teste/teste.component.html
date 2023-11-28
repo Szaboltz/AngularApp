@@ -16,16 +16,19 @@
   <p>Essa é a tabela que vem do Angular Material</p>
   <br />
 
-  <!-- Estrutura IF do angular para mostrar ou não a tabela -->
+  
   <mat-card>
     <mat-card-content>
+      <!-- Estrutura IF do angular para mostrar ou não a tabela -->
       <mat-tab-group *ngIf="data | async as result; else loading">
         <mat-tab label="All">
           <table mat-table [dataSource]="data" class="mat-elevation-z8">
             <!-- Name Column -->
             <ng-container matColumnDef="name">
               <th mat-header-cell *matHeaderCellDef>Name</th>
-              <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+              <td mat-cell *matCellDef="let element">{{ element.name }}
+                <mat-icon arial-hidden="false" arial-label="Icon e nomes">{{element.name | icon}}</mat-icon>
+              </td>
             </ng-container>
 
             <!-- Category Column -->
