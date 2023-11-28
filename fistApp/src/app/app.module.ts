@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpClientModule } from "@angular/common/http";
 import {MatToolbarModule} from '@angular/material/toolbar'; // Importanto o Angular Material
-import {MatTableModule} from '@angular/material/table'; // Importar o Material Table 
+// import {MatTableModule} from '@angular/material/table'; // Importar o Material Table 
 
 
 import { AppComponent } from "./app.component";
@@ -24,7 +24,7 @@ import { TesteModule } from "./teste/teste.module";
     BrowserAnimationsModule,
     MatToolbarModule,
     AppRoutingModule,
-    MatTableModule,
+    // MatTableModule,
     TesteModule
   ],
   providers: [AppService],
